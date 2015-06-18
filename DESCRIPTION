@@ -1,7 +1,7 @@
 Package: gpmanagement
 Title: Gaussian Process Based Management of Ecological Systems
 Version: 0.0.0.9000
-Authors@R: c(person('Carl', 'Boettiger', email='cboettig@gmail.com', role = c('aut', 'cre'), person("Daniel", "Turek", role="aut"))
+Authors@R: c(person('Carl', 'Boettiger', email='cboettig@gmail.com', role = c('aut', 'cre')), person("Daniel", "Turek", role="aut"))
 Description: Research software implementing methods for Gaussian Processes in optimal control and decision theory problems of natural resource management.
 Depends: R (>= 3.1.2)
 License: MIT + file LICENSE
@@ -10,4 +10,4 @@ Suggests: testthat,
     knitr,
     covr
 VignetteBuilder: knitr
-
+Imports: nimble (>= 0.4)

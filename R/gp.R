@@ -2,6 +2,11 @@
 #' gp
 #' 
 #' gp 
+#' @param xObs observed x values
+#' @param yObs observed y values
+#' @param xPred predicted x values
+#' @return a list object containing handles to the compiled MCMC routine, prediction routine, and nimble model object
+#' @import nimble
 #' @export
 gp_setup <- function(xObs, yObs, xPred){
 
@@ -67,7 +72,8 @@ gp_setup <- function(xObs, yObs, xPred){
   Cmcmc  <- compileNimble(Rmcmc, project = Rmodel)
   Cpred  <- compileNimble(Rpred, project = Rmodel)
 
-  list(Cmcmc=Cmcmc, Cpred=Cpred, Cmodel=Cmodel)
+  fit <- list(Cmcmc=Cmcmc, Cpred=Cpred, Cmodel=Cmodel)
+  fit
 }
 
 
@@ -92,7 +98,7 @@ gp_mcmc <- function(Cmcmc){
 
 ##It takes the MCMC samples as a *runtime* argument, so this can be iterated with running the MCMC for different numbers of iterations, initial values, or even different datasets!
 
-gpPred <- nimbleFunction(
+gpPred <- nimble::nimbleFunction(
     setup = function(model, params) {
         calcNodes <- model$getDependencies(params, determOnly = TRUE)
         nPred <- dim(model$SigPP)[1]
