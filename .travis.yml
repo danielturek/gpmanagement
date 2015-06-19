@@ -2,6 +2,7 @@
 
 language: r
 warnings_are_errors: true
+sudo: true
 
 notifications:
   email:
@@ -14,6 +15,7 @@ r_apt_packages:
 
 r_github_packages:
   - jimhester/covr
+  - nimble-dev/nimble/packages/nimble@devel
 
 after_success:
   - Rscript -e 'library(covr); coveralls()'
