@@ -1,8 +1,8 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+[![Travis-CI Build Status](https://travis-ci.org/cboettig/gpmanagement.svg?branch=master)](https://travis-ci.org/cboettig/gpmanagement) [![Coverage Status](https://coveralls.io/repos/cboettig/gpmanagement/badge.svg)](https://coveralls.io/r/cboettig/gpmanagement)
+
 gpmanagement
 ============
 
 Gaussian Process Based Management of Ecological Systems
 -------------------------------------------------------
-
-A research repository of Carl Boettiger and collaborators. Work in progress.
