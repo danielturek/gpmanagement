@@ -15,7 +15,13 @@ r_apt_packages:
 
 r_github_packages:
   - jimhester/covr
-  - nimble-dev/nimble/packages/nimble@devel
+##  - nimble-dev/nimble/packages/nimble@devel
+
+before_install:
+  - Rscript -e "install.packages('igraph',   repos = 'http://cran.us.r-project.org')"
+  - Rscript -e "install.packages('devtools', repos = 'http://cran.us.r-project.org')"
+  - Rscript -e "library(devtools); install_github('nimble-dev/nimble', ref = 'devel', subdir = 'packages/nimble')"
 
 after_success:
   - Rscript -e 'library(covr); coveralls()'
+
