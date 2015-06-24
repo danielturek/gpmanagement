@@ -31,3 +31,4 @@ gpPred <- nimble::nimbleFunction(
     )
 )
 
+message('in file nfs.R now')
