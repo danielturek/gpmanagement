@@ -24,7 +24,8 @@ install:
   - Rscript -e "install.packages('devtools', repos = 'http://cran.us.r-project.org')"
   - Rscript -e "install.packages('covr',     repos = 'http://cran.us.r-project.org')"
   - Rscript -e "library(devtools); install_github('nimble-dev/nimble', ref = 'stable', subdir = 'packages/nimble')"
-  - R CMD INSTALL .
+##  - R CMD INSTALL .
+  - Rscript -e "library(devtools); install_github('danielturek/gpmanagement')"
 
 script:
   - Rscript tests/testthat.R
