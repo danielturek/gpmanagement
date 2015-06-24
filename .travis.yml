@@ -13,8 +13,8 @@ notifications:
 ##  - testthat
 ##  - knitr
 
-r_github_packages:
-  - jimhester/covr
+##r_github_packages:
+##  - jimhester/covr
 ##  - nimble-dev/nimble/packages/nimble@stable
 
 install:
@@ -22,6 +22,7 @@ install:
   - Rscript -e "install.packages('testthat', repos = 'http://cran.us.r-project.org')"
   - Rscript -e "install.packages('igraph',   repos = 'http://cran.us.r-project.org')"
   - Rscript -e "install.packages('devtools', repos = 'http://cran.us.r-project.org')"
+  - Rscript -e "install.packages('covr',     repos = 'http://cran.us.r-project.org')"
   - Rscript -e "library(devtools); install_github('nimble-dev/nimble', ref = 'stable', subdir = 'packages/nimble')"
   - R CMD INSTALL .
 
