@@ -6,6 +6,9 @@
 \usage{
 gp_mcmc(Cmcmc)
 }
+\arguments{
+\item{Cmcmc}{A compiled NIMBLE MCMC function object}
+}
 \description{
 gp_mcmc
 }

@@ -79,7 +79,9 @@ gp_setup <- function(xObs, yObs, xPred){
 
 #' gp_mcmc
 #'
-#' gp_mcmc 
+#' gp_mcmc
+#'
+#' @param Cmcmc A compiled NIMBLE MCMC function object
 #' @export
 gp_mcmc <- function(Cmcmc){
 
