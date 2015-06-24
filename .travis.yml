@@ -21,6 +21,10 @@ before_install:
   - Rscript -e "install.packages('igraph',   repos = 'http://cran.us.r-project.org')"
   - Rscript -e "install.packages('devtools', repos = 'http://cran.us.r-project.org')"
   - Rscript -e "library(devtools); install_github('nimble-dev/nimble', ref = 'stable', subdir = 'packages/nimble')"
+  - R CMD INSTALL .
+
+##script:
+##  - Rscript tests/testthat.R
 
 after_success:
   - Rscript -e 'library(covr); coveralls()'
